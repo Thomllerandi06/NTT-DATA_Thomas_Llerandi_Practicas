@@ -220,6 +220,12 @@ La interfaz deberá adaptarse correctamente a dispositivos móviles y escritorio
 
 ---
 
+## CA-11
+
+La aplicación debe tener la opción de estar en inglés o en español
+
+---
+
 # Requisitos no funcionales
 
 ## RNF-01: Diseño responsive
