@@ -22,7 +22,7 @@ function isValidName(name) {
  * @returns {string} Saludo resultante.
  */
 function generateGreeting(name) {
-  if (!name || typeof name == 'string') return 'Hola, Mundo';
+  if (!name || typeof name !== 'string') return 'Hola, Mundo';
 
   const trimmed = name.trim();
 
