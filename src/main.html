@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saludo</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+</head>
+<body>
+
+  <main class="card" role="main">
+
+    <header class="app-header">
+      <span class="app-logo">Aplicación de Saludo</span>
+      <h1 class="app-title">Tu <em>saludo</em></h1>
+      <p class="app-subtitle">Escribe un nombre y pulsa el botón</p>
+    </header>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <!-- CA-01: saludo inicial -->
+    <div class="greeting-display" aria-live="polite">
+      <p id="greeting-display">Hola, Mundo</p>
+    </div>
+
+    <div class="form-group" style="margin-top:1.75rem;">
+      <label for="name-input">Nombre</label>
+      <input
+        type="text"
+        id="name-input"
+        placeholder="Ej: Juan Pérez"
+        autocomplete="off"
+        maxlength="60"
+      />
+    </div>
+
+    <!-- RF-03: el saludo solo cambia al pulsar este botón -->
+    <button class="btn btn-primary" id="greet-btn" type="button">
+      Saludar
+    </button>
+
+    <button class="btn btn-ghost" id="back-btn" type="button">
+      ← Volver al inicio
+    </button>
+
+    <p class="app-footer">Solo se aceptan letras y espacios</p>
+
+  </main>
+
+  <script src="../scripts/greetingLogic.js"></script>
+  <script src="../scripts/greeting.js"></script>
+</body>
+</html>

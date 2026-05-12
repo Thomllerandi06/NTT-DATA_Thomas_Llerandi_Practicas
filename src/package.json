@@ -1,0 +1,30 @@
+{
+    "name": "greeting-app",
+    "version": "1.0.0",
+    "description": "Aplicación web de saludo personalizado",
+    "main": "src/scripts/greetingLogic.js",
+    "scripts": {
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "test:coverage": "jest --coverage"
+    },
+    "jest": {
+        "testEnvironment": "jsdom",
+        "testMatch": [
+            "**/tests/**/*.test.js",
+            "**/tests/**/*.spec.js"
+        ]
+    },
+    "devDependencies": {
+        "jest": "^29.0.0",
+        "jest-environment-jsdom": "^29.0.0"
+    },
+    "keywords": [
+        "saludo",
+        "html",
+        "css",
+        "javascript"
+    ],
+    "author": "",
+    "license": "ISC"
+}

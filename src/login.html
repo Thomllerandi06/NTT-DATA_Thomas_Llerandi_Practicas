@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio de sesión — Saludo</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+</head>
+<body>
+
+  <main class="card" role="main">
+
+    <header class="app-header">
+      <span class="app-logo">Aplicación de Saludo</span>
+      <h1 class="app-title">Bienvenido/<em>a</em></h1>
+      <p class="app-subtitle">Introduce tu nombre para continuar</p>
+    </header>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <div class="form-group">
+      <label for="name-input">Tu nombre</label>
+      <input
+        type="text"
+        id="name-input"
+        name="name"
+        placeholder="Ej: Ana García"
+        autocomplete="off"
+        maxlength="60"
+      />
+    </div>
+
+    <button class="btn btn-primary" id="continue-btn" type="button">
+      Continuar →
+    </button>
+
+    <p class="app-footer">Puedes continuar sin nombre</p>
+
+  </main>
+
+  <script src="../scripts/login.js"></script>
+</body>
+</html>
