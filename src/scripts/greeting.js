@@ -10,6 +10,7 @@
   const input    = document.getElementById('name-input');
   const greetBtn = document.getElementById('greet-btn');
   const backBtn  = document.getElementById('back-btn');
+  const langSelector = document.getElementById('lang-selector');
 
   /* ── Helpers ── */
 
@@ -37,7 +38,8 @@
 
   /* ── RF-03 / CA-03: el saludo SOLO cambia al pulsar el botón ── */
   greetBtn.addEventListener('click', function () {
-    var saludo = generateGreeting(input.value);
+    var idioma = langSelector ? langSelector.value : 'es';
+    var saludo = generateGreeting(input.value, idioma);
     mostrarSaludo(saludo);
   });
 

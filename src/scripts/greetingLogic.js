@@ -10,6 +10,15 @@
  * @param {string} name
  * @returns {boolean}
  */
+const TRANSLATIONS = {
+  es: { greeting: 'Hola', defaultName: 'Mundo' },
+  en: { greeting: 'Hello', defaultName: 'World' },
+};
+
+function getTranslation(lang) {
+  return TRANSLATIONS[lang] || TRANSLATIONS.es;
+}
+
 function isValidName(name) {
   if (!name || typeof name !== 'string') return false;
   // Permite letras latinas extendidas (tildes, ñ, ü, etc.) y espacios
@@ -19,17 +28,21 @@ function isValidName(name) {
 /**
  * Genera el saludo personalizado.
  * @param {string|null} name - Nombre introducido por el usuario.
+ * @param {string} [lang='es'] - Idioma del saludo.
  * @returns {string} Saludo resultante.
  */
-function generateGreeting(name) {
-  if (!name || typeof name !== 'string') return 'Hola, Mundo';
+function generateGreeting(name, lang = 'es') {
+  const translation = getTranslation(lang);
+  const defaultGreeting = `${translation.greeting}, ${translation.defaultName}`;
+
+  if (!name || typeof name !== 'string') return defaultGreeting;
 
   const trimmed = name.trim();
 
-  if (!trimmed) return 'Hola, Mundo';
-  if (!isValidName(trimmed)) return 'Hola, Mundo';
+  if (!trimmed) return defaultGreeting;
+  if (!isValidName(trimmed)) return defaultGreeting;
 
-  return `Hola, ${trimmed}`;
+  return `${translation.greeting}, ${trimmed}`;
 }
 
 // Exportación para Node.js / Jest
